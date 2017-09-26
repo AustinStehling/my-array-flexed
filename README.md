@@ -4,15 +4,15 @@ A fun project to show the power of Ruby's dynamic arrays.
 
 ## Background
 
-* Languages such as C, offer limited flexibility with their arrays.
+* Languages such as C offer limited flexibility with their arrays.
 * In C, you must declare the size of your array upon implementation and it cannot be resized.
-* You have the ability to get and set values in the cells of your static array.
+* You have the ability to get and set values in the cells of your static array in C.
 * The get and set methods for our static array happen in constant time.
 * In Ruby we have the ability to use methods such as push, pop, shift and unshift.
 * Ruby's implementation language is C.
 * The objective of this project was to create a flexible array that was not limited by a starting size.
 * The second task was to maintain constant get and set times even if we needed to resize our array.
-* The objective was accomplished by creating ring buffer and doubling our array's length on each resize so the armotised time became O(1).
+* The objective was accomplished by creating a ring buffer and doubling our array's length on each resize so the armotised time became O(1).
 
 ## Instructions
 
