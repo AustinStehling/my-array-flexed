@@ -6,7 +6,7 @@ A fun project to show the power of Ruby's dynamic arrays.
 
 * Languages such as C offer limited flexibility with their arrays.
 * In C, you must declare the size of your array upon implementation and it cannot be resized.
-* You have the ability to get and set values in the cells of your static array in C.
+* You have the ability to get and set values in the cells of your static array.
 * The get and set methods for our static array happen in constant time.
 * In Ruby we have the ability to use methods such as push, pop, shift and unshift.
 * Ruby's implementation language is C.
@@ -18,9 +18,9 @@ A fun project to show the power of Ruby's dynamic arrays.
 
 There are three files all with the ability to create arrays. The static_array represents something similar to what we'd find in C.
 
-The flexed_array, allows for all of our favorite Ruby methods, but performs in O(n) time for shift and unshift. This is because it does not implement a ring buffer. Instead shifting and unshifting causes the entire array to be reformatted moving all of the elements an index ahead if we are unshifting onto the array, or an index behind if we are shifting off of the array.
+The flexed_array allows for all of our favorite Ruby methods, but performs in O(n) time for shift and unshift. This is because it does not implement a ring buffer. Instead shifting and unshifting causes the entire array to be reformatted moving all of the elements an index ahead if we are unshifting onto the array, or an index behind if we are shifting off of the array.
 
-To make things more efficient I implemented a ring buffer in flexed_array_with_buffer. The ring buffer keeps track of a starting index. Essentially if index 0 is filled and we want to shift onto the array, we can push onto the end of the array, and set our starting index at that point. At this point it is easy to unshift onto the array, because we can decrement the starting index down by one, and increment the count. If we push onto the array, we don't have to change the starting index.
+To make things more efficient I implemented a ring buffer in flexed_array_with_buffer. The ring buffer keeps track of a starting index. Essentially if index 0 is filled and we want to unshift onto the array, we can push onto the end of the array and set our starting index at that point. It is easy to unshift onto the array even with a starting index greater than 0, because we can decrement the starting index down by one, and increment the count. If we push onto the array, we don't have to change the starting index.
 
 * Without Ring Buffer
 ```Ruby
@@ -41,7 +41,7 @@ end
 ```
 * Open pry or irb in your terminal and load the desired array you'd like to test.
 * Set a variable equal to a new instance of the specified class.
-* Use the methods push, pop, shift and unshift. I encourage you to add enough values to see the array be resized. The starting array is of capacity 4.
+* Use the methods push, pop, shift and unshift. I encourage you to add enough values to see the array resized. The starting array is of capacity 4.
 
 ## Future Direction
 
