@@ -12,7 +12,7 @@ A fun project to show the power of Ruby's dynamic arrays.
 * Ruby's implementation language is C.
 * The objective of this project was to create a flexible array that was not limited by a starting size.
 * The second task was to maintain constant get and set times even if we needed to resize our array.
-* The objective was accomplished by creating a ring buffer and doubling our array's length on each resize so the armotised time became O(1).
+* The objective was accomplished by creating a ring buffer and doubling our array's length on each resize so the amortized time became O(1).
 
 ## Instructions
 
